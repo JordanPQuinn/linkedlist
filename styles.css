@@ -11,6 +11,16 @@
   height: 50px;
 }
 
-.input-field{
+#linked-list {
+  width: 49%;
+  display: inline-block;
+}
+
+.input-field {
   display: block;
+}
+
+#card-storage {
+  width: 49%;
+  display: inline-block;
 }
