@@ -12,10 +12,12 @@ body {
   padding: 0px;
 }
 
-/*We will need to change the h1 font-fize for responsiveness, but this can be a placeholder.*/
+/*Changed h1 size to fit screen width at desktop resolution. 
+We will have to add a media query for responsiveness*/
 
 h1 {
-  font-size: 115px;
+  font-size: 80px;
+  margin-left: 7.5%;
 }
 
 h2 {
@@ -31,7 +33,7 @@ h1,
 
 h1,
 h2,
-.card:hover,
+#website-link:hover,
 #submit-button {
   font-weight: 800;
 }
@@ -51,6 +53,7 @@ body,
 .input-field {
   color: #BCBEC0;
   display: block;
+  margin: auto;
 }
 
 .card {
@@ -65,6 +68,14 @@ body,
   font-size: 28px;
 }
 
+/* Add appropriate spacing between inputs and submit buttons*/
+
+#website-title-input, 
+#website-url-input,
+#submit-button{
+  margin-top: 7%;
+} 
+
 /* Moved a few declarations down to a shared seletor*/
 /* The #linked-list section's height will show up correctly once a position of fixed or absolute is saved*/
 
@@ -73,9 +84,16 @@ body,
   position: fixed;
 }
 
+/* container to hold title and input fields to center it */
+
+#linked-list-container{
+  margin: 27% auto;
+}
+
 #logo {
-  height: 50px;
-  width: 50px;
+  height: 95px;
+  vertical-align: middle;
+  width: 95px;
 }
 
 #card-storage {
@@ -85,18 +103,34 @@ body,
 }
 
 #website-link {
-  display:block;
   border-top: 1px solid #CFD8DC;
   border-bottom: 1px solid #CFD8DC;
   color: #607D8B;
+  display:block;
   padding: 10px 0px;
   width: 80%;
 }
+/* Finalize positioning for read/delete buttons within card and apply appropriate hover states*/
+#read-button{
+  position: relative;
+}
 
-#read-button,
-#delete-button {
+#delete-button{
+  position: relative;
+  float: right;
+}
+
+#delete-button,
+#read-button {
   background-color: #FFFFFF;
   border: 0px;
+  margin-top: 4%;
+  border-bottom: 1px solid #F2F4F4;
+}
+
+#delete-button:hover,
+#read-button:hover {
+  cursor: pointer;
 }
 
 #submit-button {
@@ -109,6 +143,7 @@ body,
 #submit-button:hover {
   background-color: #FFD773;
   border-color: #FFD773;
+  cursor: pointer;
 }
 
 #submit-button,
@@ -120,6 +155,7 @@ body,
 .input-field,
 #submit-button {
   width: 90%;
+  margin-left: 5%;
 }
 
 #linked-list,
