@@ -27,14 +27,14 @@ h2 {
 }
 
 h1,
-#submit-button {
+#btn-submit {
   color: #FFFFFF;
 }
 
 h1,
 h2,
 #website-link:hover,
-#submit-button {
+#btn-submit {
   font-weight: 800;
 }
 
@@ -72,7 +72,7 @@ body,
 
 #website-title-input, 
 #website-url-input,
-#submit-button{
+#btn-submit{
   margin-top: 7%;
 } 
 
@@ -135,27 +135,27 @@ body,
   cursor: pointer;
 }
 
-#submit-button {
+#btn-submit {
   background-color: #FFC107;
   border-color: #FFC107;
   border-radius: 0%;
   padding: 5px;
 }
 
-#submit-button:hover {
+#btn-submit:hover {
   background-color: #FFD773;
   border-color: #FFD773;
   cursor: pointer;
 }
 
-#submit-button,
+#btn-submit,
 #read-button,
 #delete-button {
   font-size: 20px;
 }
 
 .input-field,
-#submit-button {
+#btn-submit {
   width: 90%;
   margin-left: 5%;
 }
