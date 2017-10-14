@@ -17,7 +17,8 @@ We will have to add a media query for responsiveness*/
 
 h1 {
   font-size: 80px;
-  margin-left: 7.5%;
+  text-align: center;
+  height: 95px;
 }
 
 h2 {
@@ -110,7 +111,9 @@ body,
   padding: 10px 0px;
   width: 80%;
 }
+
 /* Finalize positioning for read/delete buttons within card and apply appropriate hover states*/
+
 #read-button{
   position: relative;
 }
