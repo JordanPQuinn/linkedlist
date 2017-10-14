@@ -1,26 +1,129 @@
 *,
 *:before,
 *:after {
-  font-family: 'Open Sans', sans serif;
   box-sizing: border-box;
+  font-family: 'Open Sans', sans serif;
   margin: 0;
 }
 
-#logo {
-  width: 50px;
-  height: 50px;
+body {
+  background-color: #CFD8DC;
+  font-weight: 400;
+  padding: 0px;
 }
 
-#linked-list {
-  width: 49%;
-  display: inline-block;
+/*We will need to change the h1 font-fize for responsiveness, but this can be a placeholder.*/
+
+h1 {
+  font-size: 115px;
+}
+
+h2 {
+  bottom: 15px;
+  font-size: 36px;
+  position: relative;
+}
+
+h1,
+#submit-button {
+  color: #FFFFFF;
+}
+
+h1,
+h2,
+.card:hover,
+#submit-button {
+  font-weight: 800;
+}
+
+h2,
+#read-button,
+#delete-button {
+  color: #455A64;
+}
+
+body,
+#linked-list,
+#card-storage {
+  height: 100%;
 }
 
 .input-field {
+  color: #BCBEC0;
   display: block;
 }
 
+.card {
+  background: #FFFFFF;
+  border: 1.5px solid #607D8B;
+  padding: 20px;
+}
+
+.input-field,
+#website-link {
+  font-size: 28px;
+}
+
+/* Moved a few declarations down to a shared seletor*/
+/* The #linked-list section's height will show up correctly once a position of fixed or absolute is saved*/
+
+#linked-list {
+/*  width: 49%;*/
+  background-color: #455A64;
+/*  position: fixed;*/
+/*  display: inline-block;*/
+}
+
+#logo {
+  height: 50px;
+  width: 50px;
+}
+
 #card-storage {
-  width: 49%;
+  padding: 20px;
+/*  width: 49%;*/
+/*  display: inline-block;*/
+}
+
+#website-link {
+  border-top: 1px solid #CFD8DC;
+  border-bottom: 1px solid #CFD8DC;
+  color: #607D8B;
+  padding: 10px 0px;
+  width: 80%;
+}
+
+#read-button,
+#delete-button {
+  background-color: #FFFFFF;
+  border: 0px;
+}
+
+#submit-button {
+  background-color: #FFC107;
+  border-color: #FFC107;
+  border-radius: 0%;
+  padding: 5px;
+}
+
+#submit-button:hover {
+  background-color: #FFD773;
+  border-color: #FFD773;
+}
+
+#submit-button,
+#read-button,
+#delete-button {
+  font-size: 20px;
+}
+
+.input-field,
+#submit-button {
+  width: 90%;
+}
+
+#linked-list,
+#card-storage {
   display: inline-block;
+  width: 49%;
 }
