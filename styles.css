@@ -33,7 +33,9 @@ h1,
 
 h1,
 h2,
-#website-link:hover,
+.read #read-button,
+#card #website-link:hover,
+#card #read-button:hover,
 #btn-submit {
   font-weight: 800;
 }
@@ -56,7 +58,8 @@ body,
   margin: auto;
 }
 
-.card {
+
+#card {
   display: block;
   background: #FFFFFF;
   border: 1.5px solid #607D8B;
@@ -69,6 +72,7 @@ body,
 }
 
 /* Add appropriate spacing between inputs and submit buttons*/
+ 
 
 #website-title-input, 
 #website-url-input,
@@ -109,6 +113,7 @@ body,
   display:block;
   padding: 10px 0px;
   width: 80%;
+  text-decoration-color: #F2F4F4;
 }
 
 /* Finalize positioning for read/delete buttons within card and apply appropriate hover states*/
@@ -127,11 +132,13 @@ body,
   background-color: #FFFFFF;
   border: 0px;
   margin-top: 4%;
-  border-bottom: 1px solid #F2F4F4;
+  text-decoration: underline;
+  text-decoration-color: #F2F4F4;
 }
 
 #delete-button:hover,
-#read-button:hover {
+#read-button:hover,
+#btn-submit:hover {
   cursor: pointer;
 }
 
@@ -145,7 +152,6 @@ body,
 #btn-submit:hover {
   background-color: #FFD773;
   border-color: #FFD773;
-  cursor: pointer;
 }
 
 #btn-submit,
@@ -164,4 +170,23 @@ body,
 #card-storage {
   display: inline-block;
   width: 49%;
+}
+
+#website-link:hover,
+#read-button:hover,
+#delete-button:hover {
+  text-decoration: underline;
+  text-decoration-color: #FFC107;
+}
+
+.read {
+  background-color: #F2F4F4;
+}
+
+.read #read-button {
+  color: #F05A28;
+}
+
+.read #website-link {
+  text-decoration-color: #CFD8DC
 }

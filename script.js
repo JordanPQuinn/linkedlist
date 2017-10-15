@@ -8,28 +8,31 @@
 // Fun bug to sort out: submitting the info duplicates the underline in the card display. 
 
 // Michelle - Just putting my name in so that we can know who wrote what. 
-// I liked the idea of using .text and .html, but it changed the existing card instead of creating a new one. 
-// Katie in Mod 2, hinted towards using .append() or .prepend(), so I played with that and it worked really well!
-
+// Katie in Mod 2, hinted towards using .append() or .prepend(), so I played with that and it worked really well! Check it out and see what you think.
+// I was going to leave the .prepend() commented out, but now the original card isn't showing up the way it was for the initial set up. Whoops. Sorry!!
 
 var cardStorage = $('#card-storage');
-
 
 $('#btn-submit').on('click', function () {
   var websiteTitleInput = $('#website-title-input').val();
   var websiteURLInput = $('#website-url-input').val();
-
-  cardStorage.prepend(
-    '<article class="card"><h2 class="website-title">' + websiteTitleInput + '</h2><a href="websiteURLInput" id="website-link">' + websiteURLInput + '</a><button id="read-button">Read</button><button id="delete-button">Delete</button></article');
-  
   // var websiteTitleCard = $('.website-title')
   // var websiteLinkCard = $('#website-link')  
   // console.log(websiteTitleInput);
   // console.log(websiteURLInput); 
-  // // $(websiteTitleCard).text(websiteTitleInput);
-  // // $(websiteLinkCard).html('<a href="https://www." '+websiteURLInput+' id="website-link">'+websiteURLInput+'</a>');
+  // $(websiteTitleCard).text(websiteTitleInput);
+  // $(websiteLinkCard).html('<a href="https://www." '+websiteURLInput+' id="website-link">'+websiteURLInput+'</a>');
   // console.log(websiteTitleCard);
   // console.log(websiteLinkCard);
-  
+
+  cardStorage.prepend(
+    '<article id="card"><h2 class="website-title">' + websiteTitleInput + '</h2><a href="websiteURLInput" id="website-link">' + websiteURLInput + '</a><button id="read-button">Read</button><button id="delete-button">Delete</button></article>');
+});
+
+// Michelle - Trying to get class to show up. Unsuccessful. I was using this in conjunction with .prepend() in the function above. I think it has something to do with having to refrence something in another function. 
+
+$('#read-button').on('click', function() {
+
+  $('#card').addClass('read');
 });
 
