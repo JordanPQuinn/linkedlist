@@ -5,6 +5,8 @@
 // Formatting is inserted on line 14 to ensure that the link maintains full functionality
 // without altering the appearance of the link on the card. The console logs are to test
 // that the input is what we expected. 
+// Fun bug to sort out: submitting the info duplicates the underline in the card display. 
+
 $('#btn-submit').on('click', function () {
   var websiteTitleInput = $('#website-title-input').val();
   var websiteURLInput = $('#website-url-input').val();
@@ -13,7 +15,7 @@ $('#btn-submit').on('click', function () {
   console.log(websiteTitleInput);
   console.log(websiteURLInput); 
   $(websiteTitleCard).text(websiteTitleInput);
-  $(websiteLinkCard).html('<a href=https://www.' + websiteURLInput + '>' + websiteURLInput + '</a>');
+  $(websiteLinkCard).html('<a href="https://www." '+websiteURLInput+' id="website-link">'+websiteURLInput+'</a>');
   console.log(websiteTitleCard);
   console.log(websiteLinkCard);
 });
