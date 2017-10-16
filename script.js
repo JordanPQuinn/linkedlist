@@ -21,24 +21,16 @@ function createCard() {
   var websiteURLInput = $('#website-url-input').val();
   
   if (websiteTitleInput === '') {
-    inputForm.append (
-      `
-      <p class="warning"> Please enter a valid title</p>
-      `
-      )
+    $('.warning').text('Please enter a valid title')
     return;
   }
   else if (websiteURLInput === '') {
-    inputForm.append (
-      `
-      <p class="warning"> Please enter a valid URL</p>
-
-      `
-      );
+    $('.warning').text('Please enter a valid URL')
     return;
   }
 
-  else { cardStorage.prepend(
+  else { 
+    cardStorage.prepend(
     `
     <article class="card">
     <h2 class="website-title">${websiteTitleInput}</h2>
@@ -65,9 +57,23 @@ function inputReset() {
   var websiteURLInput = $('#website-url-input').val('');
 }
 
+function enableEnterButton(){
+  if((websiteTitleInput.val().length > 0) && (websiteURLInput.val().length >0)) {
+    $('#btn-submit').removeAttr('disabled');
+  }
+}
+
 
 $('#btn-submit').on('click',  createCard);
 $('#card-storage').on('click', '.read-button', toggleReadClass);
 $('#card-storage').on('click', '.delete-button', deleteCard);
+$('#website-url-input, #website-title-input').bind('keyup', enableEnterButton);
 
+
+
+// websiteURLInput.on('keyup', function() {
+//     if ((websiteTitleInput.val() != '') && (websiteURLInput.val() != '')) {
+//       $('btn-submit').removeAttr('disabled');
+//     }    
+// });
 
