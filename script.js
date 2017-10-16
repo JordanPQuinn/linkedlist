@@ -26,6 +26,7 @@ function createCard() {
       <p class="warning"> Please enter a valid title</p>
       `
       )
+    return;
   }
   else if (websiteURLInput === '') {
     inputForm.append (
@@ -34,18 +35,21 @@ function createCard() {
 
       `
       );
+    return;
   }
 
-  cardStorage.prepend(
+  else { cardStorage.prepend(
     `
     <article class="card">
     <h2 class="website-title">${websiteTitleInput}</h2>
-    <a href="websiteURLInput" id="website-link">${websiteURLInput}</a>
+    <a href="https://www.${websiteURLInput}" id="website-link">${websiteURLInput}</a>
     <button class="read-button">Read</button>
     <button class="delete-button">Delete</button>
     </article>
     `
     );
+  }
+  inputReset();
 }
 
 function toggleReadClass() {
@@ -54,6 +58,11 @@ function toggleReadClass() {
 
 function deleteCard() {
   $(this).closest('article').remove();
+}
+
+function inputReset() {
+  var websiteTitleInput = $('#website-title-input').val('');
+  var websiteURLInput = $('#website-url-input').val('');
 }
 
 
