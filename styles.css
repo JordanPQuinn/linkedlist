@@ -33,16 +33,16 @@ h1,
 
 h1,
 h2,
-.read #read-button,
-#card #website-link:hover,
-#card #read-button:hover,
+.read-button,
+.card #website-link:hover,
+.card .read-button:hover,
 #btn-submit {
   font-weight: 800;
 }
 
 h2,
-#read-button,
-#delete-button {
+.read-button,
+.delete-button {
   color: #455A64;
 }
 
@@ -59,7 +59,7 @@ body,
 }
 
 
-#card {
+.card {
   display: block;
   background: #FFFFFF;
   border: 1.5px solid #607D8B;
@@ -118,17 +118,17 @@ body,
 
 /* Finalize positioning for read/delete buttons within card and apply appropriate hover states*/
 
-#read-button{
+.read-button{
   position: relative;
 }
 
-#delete-button{
+.delete-button{
   position: relative;
   float: right;
 }
 
-#delete-button,
-#read-button {
+.delete-button,
+.read-button {
   background-color: #FFFFFF;
   border: 0px;
   margin-top: 4%;
@@ -136,8 +136,8 @@ body,
   text-decoration-color: #F2F4F4;
 }
 
-#delete-button:hover,
-#read-button:hover,
+.delete-button:hover,
+.read-button:hover,
 #btn-submit:hover {
   cursor: pointer;
 }
@@ -155,8 +155,8 @@ body,
 }
 
 #btn-submit,
-#read-button,
-#delete-button {
+.read-button,
+.delete-button {
   font-size: 20px;
 }
 
@@ -173,20 +173,20 @@ body,
 }
 
 #website-link:hover,
-#read-button:hover,
-#delete-button:hover {
+.read-button:hover,
+.delete-button:hover {
   text-decoration: underline;
   text-decoration-color: #FFC107;
 }
 
-.read {
+.card-read {
   background-color: #F2F4F4;
 }
 
-.read #read-button {
+.card-read .read-button {
   color: #F05A28;
 }
 
-.read #website-link {
+#website-link {
   text-decoration-color: #CFD8DC
 }

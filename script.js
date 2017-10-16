@@ -12,27 +12,34 @@
 // I was going to leave the .prepend() commented out, but now the original card isn't showing up the way it was for the initial set up. Whoops. Sorry!!
 
 var cardStorage = $('#card-storage');
+var websiteURLInput = $('#website-url-input')
+var websiteTitleInput = $('#website-title-input')
 
-$('#btn-submit').on('click', function () {
+function createCard() {
   var websiteTitleInput = $('#website-title-input').val();
   var websiteURLInput = $('#website-url-input').val();
-  // var websiteTitleCard = $('.website-title')
-  // var websiteLinkCard = $('#website-link')  
-  // console.log(websiteTitleInput);
-  // console.log(websiteURLInput); 
-  // $(websiteTitleCard).text(websiteTitleInput);
-  // $(websiteLinkCard).html('<a href="https://www." '+websiteURLInput+' id="website-link">'+websiteURLInput+'</a>');
-  // console.log(websiteTitleCard);
-  // console.log(websiteLinkCard);
-
   cardStorage.prepend(
-    '<article id="card"><h2 class="website-title">' + websiteTitleInput + '</h2> <a href="https://www.' + websiteURLInput + '" id="website-link">' + websiteURLInput + '</a><button id="read-button">Read</button><button id="delete-button">Delete</button></article>');
-});
+    `
+    <article class="card">
+    <h2 class="website-title">${websiteTitleInput}</h2>
+    <a href="websiteURLInput" id="website-link">${websiteURLInput}</a>
+    <button class="read-button">Read</button>
+    <button class="delete-button">Delete</button>
+    </article>
+    `
+    );
+}
 
-// Michelle - Trying to get class to show up. Unsuccessful. I was using this in conjunction with .prepend() in the function above. I think it has something to do with having to refrence something in another function. 
+function toggleReadClass() {
+  $(this).closest('article').toggleClass('card-read');
+}
 
-$('#read-button').on('click', function() {
+function deleteCard() {
+  $(this).closest('article').remove();
+}
 
-  $('#card').addClass('read');
-});
+$('#btn-submit').on('click',  createCard);
+$('#card-storage').on('click', '.read-button', toggleReadClass);
+$('#card-storage').on('click', '.delete-button', deleteCard);
+
 
