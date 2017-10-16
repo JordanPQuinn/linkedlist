@@ -26,7 +26,7 @@ $('#btn-submit').on('click', function () {
   // console.log(websiteLinkCard);
 
   cardStorage.prepend(
-    '<article id="card"><h2 class="website-title">' + websiteTitleInput + '</h2><a href="websiteURLInput" id="website-link">' + websiteURLInput + '</a><button id="read-button">Read</button><button id="delete-button">Delete</button></article>');
+    '<article id="card"><h2 class="website-title">' + websiteTitleInput + '</h2> <a href="https://www.' + websiteURLInput + '" id="website-link">' + websiteURLInput + '</a><button id="read-button">Read</button><button id="delete-button">Delete</button></article>');
 });
 
 // Michelle - Trying to get class to show up. Unsuccessful. I was using this in conjunction with .prepend() in the function above. I think it has something to do with having to refrence something in another function. 
