@@ -190,3 +190,10 @@ body,
 #website-link {
   text-decoration-color: #CFD8DC
 }
+
+.warning {
+  margin-top: 15px;
+  text-align: center;
+  color: #FFC107;
+  font-size: 25px;
+}

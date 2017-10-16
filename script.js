@@ -12,12 +12,30 @@
 // I was going to leave the .prepend() commented out, but now the original card isn't showing up the way it was for the initial set up. Whoops. Sorry!!
 
 var cardStorage = $('#card-storage');
-var websiteURLInput = $('#website-url-input')
-var websiteTitleInput = $('#website-title-input')
+var websiteURLInput = $('#website-url-input');
+var websiteTitleInput = $('#website-title-input');
+var inputForm = $('#input-form');
 
 function createCard() {
   var websiteTitleInput = $('#website-title-input').val();
   var websiteURLInput = $('#website-url-input').val();
+  
+  if (websiteTitleInput === '') {
+    inputForm.append (
+      `
+      <p class="warning"> Please enter a valid title</p>
+      `
+      )
+  }
+  else if (websiteURLInput === '') {
+    inputForm.append (
+      `
+      <p class="warning"> Please enter a valid URL</p>
+
+      `
+      );
+  }
+
   cardStorage.prepend(
     `
     <article class="card">
@@ -37,6 +55,7 @@ function toggleReadClass() {
 function deleteCard() {
   $(this).closest('article').remove();
 }
+
 
 $('#btn-submit').on('click',  createCard);
 $('#card-storage').on('click', '.read-button', toggleReadClass);
