@@ -210,6 +210,21 @@ body,
   background-color: #FFC107;
 }
 
+.display-totals {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  right: 0px;
+  background-color: #FFFFFF;
+}
+
+.display-totals p,
+.display-totals button{
+  display: inline-block;
+  margin: 20px;
+}
+
+
 /*@media screen and (max-width: 980px) {
   h1 {
     font-size: 300%;
@@ -221,7 +236,6 @@ body,
     font-size: 234%;
     }
   }*/
-
 
 @media screen and (max-width: 650px) {
   h1 {

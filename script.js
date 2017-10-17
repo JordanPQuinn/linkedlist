@@ -37,13 +37,14 @@ function createCard() {
     `
   );
   inputReset();
-  console.log($('.card').length)
+  displayCardTotal();
 }
 }
 
 function toggleReadClass() {
   $(this).closest('article').toggleClass('card-read');
   console.log('Read count: ' + $('.card-read').length)
+  displayReadTotal();
 }
 
 function deleteCard() {
@@ -59,6 +60,15 @@ function enableEnterButton(){
   if((websiteTitleInput.val().length > 0) && (websiteURLInput.val().length >0)) {
     $('#btn-submit').removeClass('disabled');
   }
+}
+
+function displayCardTotal() {
+  console.log($('.card').length);
+  $('.total-cards').text('Total:' + $('.card').length);
+}
+
+function displayReadTotal() {
+  $('.total-read').text('Total Read:' + $('.card-read').length);
 }
 
 
