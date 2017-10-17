@@ -18,7 +18,7 @@ We will have to add a media query for responsiveness*/
 
 h1 {
   font-weight: 800;
-  font-size: 93px;
+  font-size: 400%;
   text-align: center;
 }
 
@@ -204,15 +204,33 @@ body,
   font-size: 25px;
 }
 
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 980px) {
+  h1 {
+    font-size: 300%;
+    }
+  }
+
+@media screen and (max-width: 780px) {
+  h1 {
+    font-size: 234%;
+    }
+  }
+
+
+@media screen and (max-width: 650px) {
   h1 {
     font-size: 26px;
   }
 
   #linked-list {
     width: 100%;
-    height: 50%;
+    height: 52%;
     z-index: 2;
+  }
+
+  .warning {
+    text-align: center;
+    margin-top: 1%;
   }
 
   #linked-list-container {
@@ -220,18 +238,24 @@ body,
   }
 
   #website-title-input,
-  #website-url-input,
+  #website-url-input
+  {
+    margin-bottom: 4%;
+    margin-top: 0%;
+  }
+
   #btn-submit {
-    margin-bottom: 6%;
     margin-top: 0%;
   }
 
   #card-storage {
+    position:;
     top: 50%;
     width: 100%;
   }
 
-  #card {
+  .card {
+    margin-left: 2.5%;
     width: 100%
   }
 }
