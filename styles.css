@@ -19,6 +19,7 @@ We will have to add a media query for responsiveness*/
 h1 {
   font-weight: 800;
   font-size: 400%;
+  font-size: 6vw;
   text-align: center;
 }
 
@@ -89,7 +90,6 @@ body,
 
 #linked-list {
   background-color: #455A64;
-  background-color: magenta;
   position: fixed;
 }
 
@@ -210,7 +210,7 @@ body,
   background-color: #FFC107;
 }
 
-@media screen and (max-width: 980px) {
+/*@media screen and (max-width: 980px) {
   h1 {
     font-size: 300%;
     }
@@ -220,7 +220,7 @@ body,
   h1 {
     font-size: 234%;
     }
-  }
+  }*/
 
 
 @media screen and (max-width: 650px) {

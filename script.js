@@ -21,7 +21,6 @@ function createCard() {
   var websiteURLInput = $('#website-url-input').val();
   if (websiteTitleInput === '') {
     $('.warning').text('Please enter a valid title');
-
   }
   else if (websiteURLInput === '') {
     $('.warning').text('Please enter a valid URL');
@@ -38,11 +37,13 @@ function createCard() {
     `
   );
   inputReset();
+  console.log($('.card').length)
 }
 }
 
 function toggleReadClass() {
   $(this).closest('article').toggleClass('card-read');
+  console.log('Read count: ' + $('.card-read').length)
 }
 
 function deleteCard() {
