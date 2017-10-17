@@ -19,18 +19,14 @@ var inputForm = $('#input-form');
 function createCard() {
   var websiteTitleInput = $('#website-title-input').val();
   var websiteURLInput = $('#website-url-input').val();
-  
   if (websiteTitleInput === '') {
-    $('.warning').text('Please enter a valid title')
-    return;
+    $('.warning').text('Please enter a valid title');
   }
   else if (websiteURLInput === '') {
-    $('.warning').text('Please enter a valid URL')
-    return;
+    $('.warning').text('Please enter a valid URL');
   }
-
-  else { 
-    cardStorage.prepend(
+  else{
+  cardStorage.prepend(
     `
     <article class="card">
     <h2 class="website-title">${websiteTitleInput}</h2>
@@ -39,9 +35,9 @@ function createCard() {
     <button class="delete-button">Delete</button>
     </article>
     `
-    );
-  }
+  );
   inputReset();
+}
 }
 
 function toggleReadClass() {

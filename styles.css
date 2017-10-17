@@ -8,14 +8,15 @@
 
 body {
   background-color: #CFD8DC;
-  font-weight: 400;
-  padding: 0px;
+/*  font-weight: 400;
+*/  padding: 0px;
 }
 
 /*Changed h1 size to fit screen width at desktop resolution. 
 We will have to add a media query for responsiveness*/
 
 h1 {
+  font-weight: 800;
   font-size: 80px;
   text-align: center;
 }
@@ -33,7 +34,7 @@ h1,
 
 h1,
 h2,
-.read-button,
+.card-read .read-button,
 .card #website-link:hover,
 .card .read-button:hover,
 #btn-submit {
@@ -64,6 +65,8 @@ body,
   background: #FFFFFF;
   border: 1.5px solid #607D8B;
   padding: 20px;
+  margin: 10px 0px 40px 0px;
+  width: 100%;
 }
 
 .input-field,
@@ -103,7 +106,7 @@ body,
 #card-storage {
   padding: 20px;
   position: absolute;
-  right: 1%;
+  right: 12px;
 }
 
 #website-link {
@@ -112,7 +115,7 @@ body,
   color: #607D8B;
   display:block;
   padding: 10px 0px;
-  width: 80%;
+  width: 100%;
   text-decoration-color: #F2F4F4;
 }
 
@@ -179,7 +182,9 @@ body,
   text-decoration-color: #FFC107;
 }
 
-.card-read {
+.card-read,
+.card-read .read-button,
+.card-read .delete-button {
   background-color: #F2F4F4;
 }
 
