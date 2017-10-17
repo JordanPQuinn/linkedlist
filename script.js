@@ -21,6 +21,7 @@ function createCard() {
   var websiteURLInput = $('#website-url-input').val();
   if (websiteTitleInput === '') {
     $('.warning').text('Please enter a valid title');
+
   }
   else if (websiteURLInput === '') {
     $('.warning').text('Please enter a valid URL');
@@ -55,7 +56,7 @@ function inputReset() {
 
 function enableEnterButton(){
   if((websiteTitleInput.val().length > 0) && (websiteURLInput.val().length >0)) {
-    $('#btn-submit').removeAttr('disabled');
+    $('#btn-submit').removeClass('disabled');
   }
 }
 
