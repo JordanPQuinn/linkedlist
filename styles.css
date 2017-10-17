@@ -219,7 +219,7 @@ body,
 
 @media screen and (max-width: 650px) {
   h1 {
-    font-size: 26px;
+    font-size: 165%;
   }
 
   #linked-list {
@@ -255,7 +255,7 @@ body,
   }
 
   .card {
-    margin-left: 2.5%;
+    margin-left: 2.2%;
     width: 100%
   }
 }
