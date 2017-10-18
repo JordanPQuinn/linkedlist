@@ -109,6 +109,7 @@ body,
   padding: 20px;
   position: absolute;
   right: 12px;
+  top: 70px;
 }
 
 #website-link {
@@ -213,7 +214,7 @@ body,
 .display-totals {
   position: fixed;
   top: 0px;
-  width: 100%;
+  width: 51%;
   right: 0px;
   background-color: #FFFFFF;
 }
