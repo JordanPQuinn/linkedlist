@@ -97,7 +97,7 @@ body,
 
 #card-storage {
   padding: 20px;
-  position: fixed;
+  position: absolute;
   right: 12px;
   top: 70px;
 }
