@@ -165,10 +165,15 @@ body,
 }
 
 #btn-submit {
-  background-color: #FFC107;
-  border-color: #FFC107;
+  background-color: #CFD8DC;
+  border-color: #CFD8DC;
   border-radius: 0%;
   padding: 5px;
+}
+
+#btn-submit:not(.disabled) {
+  background-color: #FFC107;
+  border-color: #FFC107;
 }
 
 #btn-submit:not(.disabled):hover {
@@ -178,7 +183,8 @@ body,
 
 #btn-submit,
 .read-button,
-.delete-button {
+.delete-button,
+.display-totals {
   font-size: 20px;
 }
 
@@ -239,7 +245,7 @@ body,
 .display-totals p,
 .display-totals button{
   display: inline-block;
-  margin: 20px 50px ;
+  margin: 15px 64px;
 }
 
 
