@@ -57,8 +57,8 @@ function toggleReadClass() {
 
 function deleteCard() {
   $(this).closest('article').remove();
-  displayCardTotal()
-  displayReadTotal()
+  displayCardTotal();
+  displayReadTotal();
 }
 
 function inputReset() {
@@ -88,8 +88,8 @@ function displayReadTotal() {
 
 function removeAllRead() {
   $('.card-read').remove();
-  displayCardTotal()
-  displayReadTotal()
+  displayCardTotal();
+  displayReadTotal();
 }
 
 function isValidUrl(url) {

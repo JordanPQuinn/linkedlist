@@ -59,7 +59,6 @@ body,
   margin: auto;
 }
 
-
 .card {
   display: block;
   background: #FFFFFF;
@@ -86,7 +85,7 @@ body,
   position: fixed;
 }
 
-#linked-list-container{
+#linked-list-container {
   margin: 27% auto;
 }
 
@@ -113,11 +112,11 @@ body,
   text-decoration-color: #F2F4F4;
 }
 
-.read-button{
+.read-button {
   position: relative;
 }
 
-.delete-button{
+.delete-button {
   position: relative;
   float: right;
 }
@@ -227,14 +226,14 @@ body,
 }
 
 .display-totals p,
-.display-totals button{
+.display-totals button {
   display: inline;
   font-size: 2vw;
   margin: auto;
   padding-right: 4%;
   }
 
-.display-totals button:hover{
+.display-totals button:hover {
   cursor: pointer;
 }
 
