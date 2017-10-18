@@ -13,9 +13,6 @@ body {
   padding: 0px;
 }
 
-/*Changed h1 size to fit screen width at desktop resolution. 
-We will have to add a media query for responsiveness*/
-
 h1 {
   font-weight: 800;
   font-size: 400%;
@@ -58,7 +55,7 @@ body,
 }
 
 .input-field {
-  color: #BCBEC0;
+  color: grey;
   display: block;
   margin: auto;
 }
@@ -78,24 +75,16 @@ body,
   font-size: 28px;
 }
 
-/* Add appropriate spacing between inputs and submit buttons*/
- 
-
 #website-title-input, 
 #website-url-input,
 #btn-submit{
   margin-top: 7%;
 } 
 
-/* Moved a few declarations down to a shared seletor*/
-/* The #linked-list section's height will show up correctly once a position of fixed or absolute is saved*/
-
 #linked-list {
   background-color: #455A64;
   position: fixed;
 }
-
-/* container to hold title and input fields to center it */
 
 #linked-list-container{
   margin: 27% auto;
@@ -124,8 +113,6 @@ body,
   text-decoration-color: #F2F4F4;
 }
 
-/* Finalize positioning for read/delete buttons within card and apply appropriate hover states*/
-
 .read-button{
   position: relative;
 }
@@ -144,11 +131,7 @@ body,
 
 .delete-button,
 .read-button {
-/*  background-color: #FFFFFF;
-  border: 0px;*/
   margin-top: 4%;
-/*  text-decoration: underline;
-  text-decoration-color: #F2F4F4;*/
 }
 
 .delete-button,
@@ -234,6 +217,7 @@ body,
 }
 
 .display-totals {
+  display: inline;
   position: fixed;
   top: 0px;
   width: 51%;
@@ -244,22 +228,22 @@ body,
 
 .display-totals p,
 .display-totals button{
-  display: inline-block;
-  margin: 15px 64px;
+  display: inline;
+  font-size: 2vw;
+  margin: auto;
+  padding-right: 4%;
+  }
+
+.display-totals button:hover{
+  cursor: pointer;
 }
 
 
-/*@media screen and (max-width: 980px) {
+@media screen and (max-width: 720px) {
   h1 {
-    font-size: 300%;
+    font-size: 5.8vw;
     }
   }
-
-@media screen and (max-width: 780px) {
-  h1 {
-    font-size: 234%;
-    }
-  }*/
 
 @media screen and (max-width: 650px) {
   h1 {
@@ -273,6 +257,7 @@ body,
   }
 
   .warning {
+    font-size: 4.8vw;
     text-align: center;
     margin-top: 1%;
   }
