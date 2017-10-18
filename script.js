@@ -48,6 +48,8 @@ function toggleReadClass() {
 
 function deleteCard() {
   $(this).closest('article').remove();
+  displayCardTotal()
+  displayReadTotal()
 }
 
 function inputReset() {
@@ -69,12 +71,18 @@ function displayReadTotal() {
   $('.total-read').text('Total Read:' + ' ' + $('.card-read').length);
 }
 
+function removeAllRead() {
+  $('.card-read').remove();
+  displayCardTotal()
+  displayReadTotal()
+}
+
 
 $('#btn-submit').on('click',  createCard);
 $('#card-storage').on('click', '.read-button', toggleReadClass);
 $('#card-storage').on('click', '.delete-button', deleteCard);
 $('#website-url-input, #website-title-input').bind('keyup', enableEnterButton);
-
+$('.delete-all-read-button').on('click', removeAllRead);
 
 
 // websiteURLInput.on('keyup', function() {
