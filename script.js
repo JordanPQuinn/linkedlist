@@ -43,7 +43,6 @@ function createCard() {
 
 function toggleReadClass() {
   $(this).closest('article').toggleClass('card-read');
-  console.log('Read count: ' + $('.card-read').length)
   displayReadTotal();
 }
 
@@ -64,11 +63,11 @@ function enableEnterButton(){
 
 function displayCardTotal() {
   console.log($('.card').length);
-  $('.total-cards').text('Total:' + $('.card').length);
+  $('.total-cards').text('Total:' + ' ' + $('.card').length);
 }
 
 function displayReadTotal() {
-  $('.total-read').text('Total Read:' + $('.card-read').length);
+  $('.total-read').text('Total Read:' + ' ' + $('.card-read').length);
 }
 
 

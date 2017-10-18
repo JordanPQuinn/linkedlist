@@ -217,12 +217,13 @@ body,
   width: 51%;
   right: 0px;
   background-color: #FFFFFF;
+  text-align: center;
 }
 
 .display-totals p,
 .display-totals button{
   display: inline-block;
-  margin: 20px;
+  margin: 20px 50px ;
 }
 
 
