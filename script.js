@@ -1,15 +1,8 @@
-
-
-
-// On submit, the inner text of the card values will change to the value of the input field.
-// Formatting is inserted on line 14 to ensure that the link maintains full functionality
-// without altering the appearance of the link on the card. The console logs are to test
-// that the input is what we expected. 
-// Fun bug to sort out: submitting the info duplicates the underline in the card display. 
-
-// Michelle - Just putting my name in so that we can know who wrote what. 
-// Katie in Mod 2, hinted towards using .append() or .prepend(), so I played with that and it worked really well! Check it out and see what you think.
-// I was going to leave the .prepend() commented out, but now the original card isn't showing up the way it was for the initial set up. Whoops. Sorry!!
+$('#btn-submit').on('click',  createCard);
+$('#card-storage').on('click', '.read-button', toggleReadClass);
+$('#card-storage').on('click', '.delete-button', deleteCard);
+$('#website-url-input, #website-title-input').bind('keyup', enableEnterButton);
+$('.delete-all-read-button').on('click', removeAllRead);
 
 var cardStorage = $('#card-storage');
 var websiteURLInput = $('#website-url-input');
@@ -19,11 +12,9 @@ var inputForm = $('#input-form');
 function createCard() {
   var websiteTitleInput = $('#website-title-input').val();
   var websiteURLInput = $('#website-url-input').val();
-  if (websiteTitleInput === '') {
-    $('.warning').text('Please enter a valid title');
-  }
-  else if (websiteURLInput === '') {
-    $('.warning').text('Please enter a valid URL');
+  console.log(isValidUrl(websiteURLInput));
+  if(validateInput() === false){
+    return;
   }
   else{
   cardStorage.prepend(
@@ -36,9 +27,27 @@ function createCard() {
     </article>
     `
   );
+  $('.warning').text('');
   inputReset();
+  disableEnterButton();
   displayCardTotal();
+  }
 }
+
+function validateInput() {
+  var websiteTitleInput = $('#website-title-input').val();
+  var websiteURLInput = $('#website-url-input').val();
+  if (websiteTitleInput === '') {
+    $('.warning').text('Please enter a valid title');
+    return false;
+  }
+  else if (websiteURLInput === '' || isValidUrl(websiteURLInput) === false) {
+    $('.warning').text('Please enter a valid URL ending in .com');
+    return false;
+  }
+  else{
+    return true;
+  }
 }
 
 function toggleReadClass() {
@@ -48,18 +57,24 @@ function toggleReadClass() {
 
 function deleteCard() {
   $(this).closest('article').remove();
-  displayCardTotal()
-  displayReadTotal()
+  displayCardTotal();
+  displayReadTotal();
 }
 
 function inputReset() {
-  var websiteTitleInput = $('#website-title-input').val('');
-  var websiteURLInput = $('#website-url-input').val('');
+  $('#website-title-input').val('');
+  $('#website-url-input').val('');
 }
 
-function enableEnterButton(){
+function enableEnterButton() {
   if((websiteTitleInput.val().length > 0) && (websiteURLInput.val().length >0)) {
     $('#btn-submit').removeClass('disabled');
+  }
+}
+
+function disableEnterButton() {
+  if((websiteTitleInput.val().length === 0) && (websiteURLInput.val().length === 0)) {
+    $('#btn-submit').addClass('disabled');
   }
 }
 
@@ -73,21 +88,11 @@ function displayReadTotal() {
 
 function removeAllRead() {
   $('.card-read').remove();
-  displayCardTotal()
-  displayReadTotal()
+  displayCardTotal();
+  displayReadTotal();
 }
 
-
-$('#btn-submit').on('click',  createCard);
-$('#card-storage').on('click', '.read-button', toggleReadClass);
-$('#card-storage').on('click', '.delete-button', deleteCard);
-$('#website-url-input, #website-title-input').bind('keyup', enableEnterButton);
-$('.delete-all-read-button').on('click', removeAllRead);
-
-
-// websiteURLInput.on('keyup', function() {
-//     if ((websiteTitleInput.val() != '') && (websiteURLInput.val() != '')) {
-//       $('btn-submit').removeAttr('disabled');
-//     }    
-// });
+function isValidUrl(url) {
+  return /^(http(s)?:\/\/)?(www\.)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/.test(url);
+}
 
