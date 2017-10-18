@@ -62,7 +62,6 @@ function enableEnterButton(){
 }
 
 function displayCardTotal() {
-  console.log($('.card').length);
   $('.total-cards').text('Total:' + ' ' + $('.card').length);
 }
 
