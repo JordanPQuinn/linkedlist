@@ -9,8 +9,8 @@
 
 body {
   background-color: #CFD8DC;
-/*  font-weight: 400;
-*/  padding: 0px;
+  font-weight: 400;
+  padding: 0px;
 }
 
 /*Changed h1 size to fit screen width at desktop resolution. 
@@ -45,7 +45,9 @@ h2,
 
 h2,
 .read-button,
-.delete-button {
+.delete-button,
+.display-totals,
+.delete-all-read-button {
   color: #455A64;
 }
 
@@ -133,11 +135,25 @@ body,
   float: right;
 }
 
+.delete-all-read-button,
 .delete-button,
 .read-button {
   background-color: #FFFFFF;
   border: 0px;
+}
+
+.delete-button,
+.read-button {
+/*  background-color: #FFFFFF;
+  border: 0px;*/
   margin-top: 4%;
+/*  text-decoration: underline;
+  text-decoration-color: #F2F4F4;*/
+}
+
+.delete-button,
+.read-button, 
+.delete-all-read-button {
   text-decoration: underline;
   text-decoration-color: #F2F4F4;
 }
