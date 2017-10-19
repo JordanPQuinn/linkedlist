@@ -79,7 +79,7 @@ function disableEnterButton() {
 }
 
 function displayCardTotal() {
-  $('.total-cards').text('Total:' + ' ' + $('.card').length);
+  $('.total-cards').text('Total Links:' + ' ' + $('.card').length);
 }
 
 function displayReadTotal() {
